@@ -1,0 +1,11 @@
+# Logs
+npm-debug.log*
+
+# Output
+lib
+
+# Dependency directories
+node_modules/
+
+# TypeScript cache
+*.tsbuildinfo
