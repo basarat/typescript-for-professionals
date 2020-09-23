@@ -1,5 +1,20 @@
 {
   "compilerOptions": {
+    /* Strict Type-Checking Options */
+    "strict": true,                          /* Enable all strict type-checking options. */
+    "strictNullChecks": true,                /* Enable strict null checks. */
+  
+  
+  
+  
+  // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
+  // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
+  // "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
+  // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
+  // "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */
+  // "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */
+
+
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Basic Options */
@@ -23,16 +38,6 @@
     // "importHelpers": true,                 /* Import emit helpers from 'tslib'. */
     // "downlevelIteration": true,            /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
     // "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
-
-    /* Strict Type-Checking Options */
-    "strict": false,                           /* Enable all strict type-checking options. */
-    // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
-    // "strictNullChecks": true,              /* Enable strict null checks. */
-    // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
-    // "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
-    // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
-    // "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */
-    // "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */
 
     /* Additional Checks */
     // "noUnusedLocals": true,                /* Report errors on unused locals. */
