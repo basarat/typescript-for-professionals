@@ -1,8 +1,8 @@
 /** A FIFO (First In First Out) collection */
 class Queue<T> {
-  data = [];
+  public data:T[] = [];
   push(item: T) { this.data.push(item); }
-  pop(): T { return this.data.shift(); }
+  pop(): T { return this.data.shift()! ; } // ! signifies that it can't be undefined
 }
 
 const queue = new Queue<number>();
