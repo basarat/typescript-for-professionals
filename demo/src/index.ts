@@ -1,7 +1,23 @@
-type Getter<T extends string> = `get${Capitalize<T>}`;
-type Setter<T extends string> = `set${Capitalize<T>}`;
+export type Setters<State> = {
+  [K in keyof State & string as `set${Capitalize<K>}`]: (value: State[K]) => void;
+};
 
-type Name = 'name';
+export type Getters<State> = {
+  [K in keyof State & string as `get${Capitalize<K>}`]: () => State[K];
+};
 
-type GetName = Getter<Name>;
-type SetName = Setter<Name>;
+export type Store<State> = Setters<State> & Getters<State>;
+
+type PersonState = {
+  name: string;
+  age: number;
+};
+
+type PersonStore = Store<PersonState>;
+
+declare const personStore: PersonStore;
+personStore.setName("John");
+personStore.setAge(20);
+const name: string = personStore.getName();
+const age: number = personStore.getAge();
+
