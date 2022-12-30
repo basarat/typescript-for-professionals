@@ -1,24 +1,17 @@
-export type Name = { name: string };
-export type Age = { age: number };
+export const LoginMode = {
+  device: 'device',
+  email: 'email',
+  social: 'social',
+} as const;
 
-type Union = Name | Age | (Name & Age);
+export type LoginMode = keyof typeof LoginMode;
 
-let union: Union;
-union = { name: 'Jane' };
-union = { age: 29 }
-union = { name: 'Jane', age: 29 };
-
-function filter(union: Union) {
-  if ('name' in union) { // Name
-    union.name; // string
-  }
-
-  if ('age' in union) { // Age
-    union.age; // number
-  }
-
-  if ('name' in union && 'age' in union) { // Name & Age
-    union.name;
-    union.age;
-  }
+export function initiateLogin(mode: LoginMode) {
+  // ... 
 }
+
+initiateLogin(LoginMode.device);
+
+initiateLogin('device');
+
+Object.keys(LoginMode); // ['device', 'email', 'social']
