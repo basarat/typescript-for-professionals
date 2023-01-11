@@ -9,7 +9,7 @@ type Rectangle = {
 
 type Shape = Square | Rectangle;
 
-function area(shape: Shape) {
+function area(shape: Shape): void|number {
   if ('size' in shape) {
     return shape.size * shape.size;
   }
