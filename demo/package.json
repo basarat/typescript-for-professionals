@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc --watch"
+    "start": "tsc --watch",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",

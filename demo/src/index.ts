@@ -1,9 +1,15 @@
-type A<T> = (x: T) => T;
-interface GenericInterfaceForFunction<T> {
-  (x: T): T;
+enum Size {
+  Small,
+  Medium,
+  Large,
 }
 
-type B = <T>(x: T) => T;
-interface InterfaceForGenericFunction {
-  <T>(x: T): T;
-}
+type Pizza = {
+  type: string;
+  size: Size;
+};
+
+const pizza: Pizza = {
+  type: "pepperoni",
+  size: Size.Medium,
+};
