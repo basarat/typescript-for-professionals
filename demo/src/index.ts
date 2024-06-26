@@ -1,15 +1,13 @@
-enum Size {
-  Small,
-  Medium,
-  Large,
+function arrayOpen<T>(a: T, b: T) {
+  return [a, b];
 }
 
-type Pizza = {
-  type: string;
-  size: Size;
-};
+const free = arrayOpen(1, 2);
+//     ^?
 
-const pizza: Pizza = {
-  type: "pepperoni",
-  size: Size.Medium,
-};
+function arrayConstrained<T extends number>(a: T, b: T) {
+  return [a, b];
+}
+
+
+
